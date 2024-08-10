@@ -1,0 +1,30 @@
+#content-1 .passion {
+  background-image: url("../../../assets/images/background/PASSION.png");
+  height: 70vh;
+}
+
+#content-3 .founder {
+  background-color: var(--ant-primary-3);
+}
+
+#content-4 .products {
+  background-image: url("../../../assets/images/background/background-cua-product-scaled.jpg");
+}
+
+#content-4 .products .banner-1 {
+  background-image: url("../../../assets/images/background/background-cua-product-scaled.jpg");
+}
+#content-4 .products .banner-2 {
+  background-image: url("../../../assets/images/background/background-cua-product-scaled.jpg");
+}
+#content-4 .products .banner-3 {
+  background-image: url("../../../assets/images/background/background-cua-product-scaled.jpg");
+}
+
+#content-5 .achievements {
+  background-color: #fff;
+}
+
+#content-6 .offices {
+  background-color: var(--ant-primary-3);
+}

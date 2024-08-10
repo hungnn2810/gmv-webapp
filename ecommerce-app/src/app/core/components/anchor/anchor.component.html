@@ -1,0 +1,14 @@
+<nz-anchor
+  class="fixed-anchor custom-anchor hide-for-small"
+  [nzShowInkInFixed]="false"
+>
+  <ng-container *ngFor="let section of sections">
+    <nz-link
+      [nzHref]="'#' + section.id"
+      [nz-tooltip]="section.title"
+      [nzTooltipPlacement]="'left'"
+    ></nz-link>
+  </ng-container>
+</nz-anchor>
+
+<ng-content></ng-content>

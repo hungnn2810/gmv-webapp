@@ -1,0 +1,506 @@
+<div id="header">
+  <div class="header-wrapper">
+    <div id="top-bar" class="header-top hide-for-small">
+      <a href="">Apohair Vietnam Factory & Wholesale Supplier</a>
+    </div>
+  </div>
+  <nz-affix>
+    <div data-aos="fade-down" data-aos-duration="1000">
+      <div class="masthead">
+        <div class="header-inner container">
+          <div nz-flex nzJustify="space-around" nzAlign="center">
+            <div
+              class="header-nav hide-for-small hide-for-medium show-for-large"
+            >
+              <div nz-flex nzJustify="start" nzAlign="center">
+                <div class="header-nav-item">
+                  <ng-container *ngTemplateOutlet="tplChangeLanguage">
+                  </ng-container>
+                </div>
+                <div class="header-nav-item">
+                  <ng-container *ngTemplateOutlet="tplSearch"></ng-container>
+                </div>
+              </div>
+            </div>
+            <!-- Sidebar for mobile -->
+            <div
+              class="header-nav show-for-small show-for-medium hide-for-large"
+            >
+              <div nz-flex nzJustify="start" nzAlign="center">
+                <div class="header-nav-item">
+                  <button
+                    nz-button
+                    nzType="default"
+                    nzShape="circle"
+                    class="border-0"
+                    (click)="sidebarVisible = true"
+                  >
+                    <span nz-icon>
+                      <fa-icon [icon]="'bars'"></fa-icon>
+                    </span>
+                  </button>
+                </div>
+                <div class="header-nav-item">
+                  <button
+                    nz-button
+                    nzType="default"
+                    nzShape="circle"
+                    class="border-0"
+                  >
+                    <span nz-icon>
+                      <fa-icon [icon]="'envelope'"></fa-icon>
+                    </span>
+                  </button>
+                </div>
+                <div class="header-nav-item">
+                  <button
+                    nz-button
+                    nzType="default"
+                    nzShape="circle"
+                    class="border-0"
+                  >
+                    <span nz-icon>
+                      <fa-icon [icon]="'phone'"></fa-icon>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- LOGO -->
+            <div class="header-logo">
+              <div nz-flex nzJustify="center" nzAlign="center">
+                <img
+                  data-aos="zoom-in"
+                  src="../../../../../assets/images/logo/logo.png"
+                  [ngStyle]="{ transform: 'scale(' + logoScale + ')' }"
+                  alt="GMV"
+                  style="width: auto; height: 55px"
+                />
+              </div>
+            </div>
+
+            <div class="header-nav">
+              <div nz-flex nzJustify="end" nzAlign="center">
+                <div
+                  class="header-nav-item hide-for-small hide-for-medium show-for-large"
+                >
+                  <button
+                    nz-button
+                    nzType="default"
+                    nzShape="circle"
+                    class="border-0"
+                    nz-tooltip
+                    nzTooltipTitle="namgk94@gmail.com"
+                    nzTooltipPlacement="top"
+                  >
+                    <span nz-icon>
+                      <fa-icon [icon]="'envelope'"></fa-icon>
+                    </span>
+                  </button>
+                </div>
+                <div
+                  class="header-nav-item hide-for-small hide-for-medium show-for-large"
+                >
+                  <button
+                    nz-button
+                    nzType="default"
+                    nzShape="circle"
+                    class="border-0"
+                    nz-tooltip
+                    nzTooltipTitle="+84912931232"
+                    nzTooltipPlacement="top"
+                  >
+                    <span nz-icon>
+                      <fa-icon [icon]="'phone'"></fa-icon>
+                    </span>
+                  </button>
+                </div>
+                <div class="header-nav-item">
+                  <button
+                    nz-button
+                    nzType="default"
+                    nzShape="circle"
+                    class="border-0"
+                  >
+                    <span nz-icon>
+                      <fa-icon [icon]="'user'"></fa-icon>
+                    </span>
+                  </button>
+                </div>
+                <div class="header-nav-item">
+                  <button
+                    nz-button
+                    nzType="default"
+                    nzShape="circle"
+                    class="border-0"
+                  >
+                    <span nz-icon>
+                      <fa-icon [icon]="'cart-shopping'"></fa-icon>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NAVBAR FOR DESKTOP -->
+      <div
+        id="navbar"
+        class="wide-nav hide-for-small hide-for-medium show-for-large"
+      >
+        <div class="container">
+          <nz-header>
+            <div class="logo"></div>
+            <ul nz-menu nzMode="horizontal">
+              <li nz-menu-item routerLink="about-us" nzMatchRouter>
+                {{ "About us" | translate }}
+              </li>
+              <li
+                nz-menu-item
+                nz-dropdown
+                nzOverlayClassName="dropdown-center"
+                [nzDropdownMenu]="hairExtensions"
+                nzTrigger="click"
+                [nzPlacement]="'topCenter'"
+              >
+                {{ "Hair extensions" | translate }}
+
+                <fa-icon class="down-icon" [icon]="'chevron-down'"></fa-icon>
+              </li>
+              <li nz-menu-item>
+                <img
+                  src="../../../../../assets/images/header/price-tag.svg"
+                  alt=""
+                  class="nav-icon"
+                />
+                {{ "Best selling products" | translate }}
+              </li>
+              <li nz-menu-item>
+                <img
+                  src="../../../../../assets/images/header/free-shipping.svg"
+                  alt=""
+                  class="nav-icon"
+                />
+                {{ "Free shipping us" | translate }}
+              </li>
+              <li nz-menu-item>{{ "Brazilian hair" | translate }}</li>
+              <li nz-menu-item>{{ "Wholesale hair vendors" | translate }}</li>
+              <li
+                nz-menu-item
+                nz-dropdown
+                nzOverlayClassName="dropdown-center"
+                [nzBackdrop]="false"
+                [nzDropdownMenu]="menuBlog"
+              >
+                {{ "Blog" | translate }}
+              </li>
+              <li nz-menu-item>{{ "Contact us" | translate }}</li>
+            </ul>
+          </nz-header>
+        </div>
+      </div>
+    </div>
+  </nz-affix>
+
+  <!-- SIDEBAR FOR TABLET AND MOBILE -->
+  <nz-drawer
+    [nzClosable]="false"
+    [nzVisible]="sidebarVisible"
+    [nzPlacement]="'left'"
+    (nzOnClose)="sidebarVisible = false"
+    [nzWidth]="250"
+    [nzBodyStyle]="{ padding: '20px 0 0', overflowX: 'hidden' }"
+  >
+    <ng-container *nzDrawerContent>
+      <nz-sider nzTheme="light">
+        <div nz-flex nzJustify="center" nzAlign="center">
+          <nz-input-group
+            [nzSuffix]="suffixIconSearch"
+            style="border-radius: 90px"
+          >
+            <input
+              type="text"
+              [(ngModel)]="searchValue"
+              nz-input
+              placeholder="Search products"
+            />
+          </nz-input-group>
+          <ng-template #suffixIconSearch>
+            <span nz-icon nzType="search"></span>
+          </ng-template>
+        </div>
+
+        <nz-divider></nz-divider>
+
+        <ul nz-menu nzMode="inline" class="sider-menu">
+          <li nz-menu-item nzMatchRouter routerLink="/about-us">
+            <span class="text-uppercase fs-13">{{
+              "About us" | translate
+            }}</span>
+          </li>
+          <li nz-submenu [nzTitle]="nzSubMenuTitle">
+            <ng-template #nzSubMenuTitle>
+              <div>
+                <img
+                  src="../../../../../assets/images/header/price-tag.svg"
+                  alt=""
+                  class="nav-icon"
+                />
+                <span class="text-uppercase fs-13">{{
+                  "Hair extensions" | translate
+                }}</span>
+              </div>
+            </ng-template>
+            <ng-container *ngFor="let sub of subMenu">
+              <ng-container *ngIf="sub.items.length == 0; else multipleItems">
+                <ul nz-menu-item nzMatchRouter routerLink="{{ sub.route }}">
+                  <a [routerLink]="sub.route">{{ sub.name | translate }}</a>
+                </ul>
+              </ng-container>
+
+              <ng-template #multipleItems>
+                <ul nz-submenu [nzTitle]="sub.name | translate">
+                  <ul
+                    *ngFor="let item of sub.items"
+                    nz-menu-item
+                    nzMatchRouter
+                    routerLink="{{ item.route }}"
+                  >
+                    <a [routerLink]="item.route">{{ item.name | translate }}</a>
+                  </ul>
+                </ul>
+              </ng-template>
+            </ng-container>
+          </li>
+          <li nz-menu-item nzMatchRouter routerLink="/best-selling-products">
+            <div>
+              <img
+                src="../../../../../assets/images/header/price-tag.svg"
+                alt=""
+                class="nav-icon"
+              />
+              <span class="text-uppercase fs-13">{{
+                "Best selling products" | translate
+              }}</span>
+            </div>
+          </li>
+          <li nz-menu-item nzMatchRouter routerLink="/free-shipping-us">
+            <div>
+              <img
+                src="../../../../../assets/images/header/free-shipping.svg"
+                alt=""
+                class="nav-icon"
+              />
+              <span class="text-uppercase fs-13">{{
+                "Free shipping us" | translate
+              }}</span>
+            </div>
+          </li>
+          <li nz-menu-item nzMatchRouter routerLink="/brazilian-hair">
+            <span class="text-uppercase fs-13">{{
+              "Brazilian hair" | translate
+            }}</span>
+          </li>
+          <li nz-menu-item nzMatchRouter routerLink="/wholesale-hair-vendors">
+            <span class="text-uppercase fs-13">{{
+              "Wholesale hair vendors" | translate
+            }}</span>
+          </li>
+          <li nz-menu-item nzMatchRouter routerLink="/our-culture">
+            <span class="text-uppercase fs-13">{{
+              "Our culture" | translate
+            }}</span>
+          </li>
+          <li nz-menu-item nzMatchRouter routerLink="/in-the-media">
+            <span class="text-uppercase fs-13">{{
+              "In the media" | translate
+            }}</span>
+          </li>
+          <li nz-menu-item nzMatchRouter routerLink="/contact-us">
+            <span class="text-uppercase fs-13">{{
+              "Contact us" | translate
+            }}</span>
+          </li>
+
+          <!-- Select language -->
+          <li style="padding: 0 16px 0 24px; margin: 4px 0 16px">
+            <ng-container *ngTemplateOutlet="tplChangeLanguage"></ng-container>
+          </li>
+        </ul>
+      </nz-sider>
+    </ng-container>
+  </nz-drawer>
+
+  <nz-dropdown-menu #hairExtensions="nzDropdownMenu">
+    <div class="sub-menu">
+      <nz-tabset class="wrapper-tabs" [nzCentered]="true" nzType="card">
+        <nz-tab *ngFor="let extens of extensions" [nzTitle]="extens.name">
+          <div
+            *ngIf="extens.type == 'default'"
+            class="tab-content"
+            nz-flex
+            nzGap="10px"
+          >
+            <div
+              style="flex: 1"
+              class="extension"
+              *ngFor="let subMenu of extens.subMenu"
+              [ngStyle]="{ flex: extens.subMenu.length }"
+            >
+              <ul>
+                <span
+                  class="menu-item"
+                  nz-flex
+                  nzAlign="center"
+                  style="margin-bottom: 20px"
+                >
+                  <fa-icon [icon]="'list'"></fa-icon>
+                  <span class="extension-name">
+                    {{ subMenu.name }}
+                  </span>
+                </span>
+
+                <li
+                  class="menu-item"
+                  *ngFor="let item of subMenu.items; let i = index"
+                >
+                  <span nz-flex nzAlign="center">
+                    <fa-icon [icon]="'chevron-right'"></fa-icon>
+                    <span class="extension-name">
+                      {{ item.name }}
+                    </span>
+                  </span>
+                  <nz-divider
+                    *ngIf="i != subMenu.items.length - 1"
+                    style="margin: 7px 0"
+                  ></nz-divider>
+                </li>
+              </ul>
+            </div>
+
+            <div class="menu-image">
+              <img
+                loading="lazy"
+                src="../../../../../assets/images/header/banner-clip-in-1320x572.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div
+            class="tab-content"
+            *ngIf="extens.type == 'accessory'"
+            nz-flex
+            nzJustify="center"
+            nzAlign="center"
+          >
+            <div nz-flex nzWrap="wrap" nzGap="20px">
+              <div
+                *ngFor="let item of extens.subMenu[0].items"
+                class="accessory-item menu-item"
+                nz-flex
+                [nzVertical]="true"
+                nzJustify="space-between"
+                nzAlign="center"
+              >
+                <div class="image">
+                  <img [src]="item.src" alt="" />
+                </div>
+                <span style="font-weight: bold" class="extension-name">
+                  {{ item.name }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </nz-tab>
+      </nz-tabset>
+    </div>
+  </nz-dropdown-menu>
+
+  <nz-dropdown-menu #menuBlog="nzDropdownMenu">
+    <div style="flex: 1" class="extension sub-menu">
+      <ul>
+        <li class="menu-item" *ngFor="let item of blogs; let i = index">
+          <span nz-flex nzAlign="center">
+            <span class="extension-name">
+              {{ item.name }}
+            </span>
+          </span>
+          <nz-divider
+            *ngIf="i != blogs.length - 1"
+            style="margin: 7px 0"
+          ></nz-divider>
+        </li>
+      </ul>
+    </div>
+  </nz-dropdown-menu>
+</div>
+
+<!-- CHANGE LANGUAGE TEMPLATE -->
+<ng-template #tplChangeLanguage>
+  <nz-select
+    style="width: 110px"
+    [nzShowArrow]="true"
+    [(ngModel)]="selectedLanguage"
+    (ngModelChange)="onSelectLanguage()"
+    [nzCustomTemplate]="customLabelTemplate"
+  >
+    <ng-template #customLabelTemplate let-selected>
+      <ng-container *ngIf="selected">
+        <img
+          [src]="languageFlag"
+          alt=""
+          style="width: 20px; height: 20px; margin-right: 8px"
+        />
+        <span>{{ languageName }}</span>
+      </ng-container>
+    </ng-template>
+
+    <nz-option
+      *ngFor="let item of languages"
+      nzCustomContent
+      [nzLabel]="item.name"
+      [nzValue]="item.code"
+    >
+      <img
+        [src]="item.flag"
+        alt=""
+        style="width: 20px; height: 20px; margin-right: 8px"
+      />
+      <span>{{ item.name }}</span>
+    </nz-option>
+  </nz-select>
+</ng-template>
+
+<!-- SEARCH TEMPLATE -->
+<ng-template #tplSearch>
+  <div
+    nz-flex
+    nzAlign="center"
+    (mouseenter)="onMouseEnter()"
+    (mouseleave)="onMouseLeave()"
+  >
+    <button nz-button *ngIf="showInput == false" [nzType]="'default'">
+      <i nz-icon nzType="search"></i>
+    </button>
+    <div
+      class="input-wrapper"
+      [@toggleInput]="showInput ? 'visible' : 'hidden'"
+    >
+      <nz-input-group [nzSuffix]="suffixIconSearch">
+        <input
+          type="text"
+          [(ngModel)]="searchValue"
+          nz-input
+          placeholder="Search products"
+        />
+      </nz-input-group>
+      <ng-template #suffixIconSearch>
+        <span nz-icon nzType="search"></span>
+      </ng-template>
+    </div>
+  </div>
+</ng-template>

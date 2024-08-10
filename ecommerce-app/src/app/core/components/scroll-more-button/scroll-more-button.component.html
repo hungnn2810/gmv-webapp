@@ -1,0 +1,10 @@
+<button
+  [class]="
+    'scroll-for-more position-absolute bottom-0 start-50 translate-middle-x ' +
+    theme
+  "
+  aria-label="Scroll for more"
+  (click)="scrollToNextSection()"
+>
+  <fa-icon [icon]="'chevron-down'"></fa-icon>
+</button>

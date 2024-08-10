@@ -1,0 +1,154 @@
+<section id="footer">
+  <div class="wrapper-section contact-form bg-fill container-fluid">
+    <div class="container" style="padding: 30px 0">
+      <div class="section-bg-overlay absolute fill"></div>
+      <div
+        nz-flex
+        nzJustify="center"
+        nzAlign="center"
+        [nzVertical]="true"
+        data-aos="fade-up"
+      >
+        <h3 class="section-title section-title-center">
+          <span class="section-title-main">Contact Us</span>
+        </h3>
+
+        <p style="text-align: center; color: #fff" class="position-relative">
+          We will contact you shortly
+        </p>
+        <form
+          nz-form
+          [formGroup]="formGroup"
+          style="width: 50%"
+          nzLayout="vertical"
+        >
+          <nz-form-item>
+            <nz-form-label nzFor="code" nzRequired>{{
+              "Code" | translate
+            }}</nz-form-label>
+            <nz-form-control>
+              <input
+                nzSize="default"
+                id="code"
+                formControlName="code"
+                nz-input
+                required
+              />
+            </nz-form-control>
+          </nz-form-item>
+
+          <div>
+            <nz-form-item>
+              <nz-form-label nzFor="address">{{
+                "Message" | translate
+              }}</nz-form-label>
+              <nz-form-control>
+                <textarea
+                  rows="2"
+                  formControlName="address"
+                  nz-input
+                ></textarea>
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper-section dark container-fluid">
+    <div class="container" style="padding: 30px 0">
+      <div nz-row [nzGutter]="15" nzJustify="space-around">
+        <!-- COMPANY INFORMATION -->
+        <div
+          nz-col
+          [nzSpan]="24"
+          [nzMd]="24"
+          [nzLg]="6"
+          nz-flex
+          [nzVertical]="true"
+          style="padding-left: 7.5px; padding-right: 7.5px"
+          class="company-information"
+        >
+          <!-- LOGO -->
+          <a href="" class="pb-4 logo">
+            <img
+              src="../../../../../assets/images/logo/logo.png"
+              alt="Company Logo"
+              style="height: 50px; width: auto"
+            />
+          </a>
+
+          <!-- INFORMATION -->
+          <a
+            class="ux-menu-link"
+            href="https://maps.app.goo.gl/dovdrKwEHHBXMqNg7"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+          >
+            <fa-icon [icon]="'map-location'"></fa-icon>
+            <span class="ux-menu-link-text">
+              Address: Building 3A, Lane 82 Duy Tan, Cau Giay, Hanoi, Vietnam
+            </span>
+          </a>
+
+          <a
+            class="ux-menu-link"
+            href="https://maps.app.goo.gl/dovdrKwEHHBXMqNg7"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+          >
+            <fa-icon [icon]="'location-dot'"></fa-icon>
+            <span class="ux-menu-link-text">
+              Factory: Building 3A, Lane 82 Duy Tan, Cau Giay, Hanoi, Vietnam
+            </span>
+          </a>
+
+          <a
+            class="ux-menu-link"
+            href="https://maps.app.goo.gl/dovdrKwEHHBXMqNg7"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+          >
+            <fa-icon [icon]="'phone'"></fa-icon>
+            <span class="ux-menu-link-text">(+84)121213123123</span>
+          </a>
+
+          <a
+            class="ux-menu-link"
+            href="https://maps.app.goo.gl/dovdrKwEHHBXMqNg7"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+          >
+            <fa-icon [icon]="'envelope'"></fa-icon>
+            <span class="ux-menu-link-text">marketing&#64;gmail.com</span>
+          </a>
+        </div>
+
+        <!-- MENU -->
+        <div nz-col [nzSpan]="24" [nzMd]="24" [nzLg]="18">
+          <div nz-row nzGutter="6" nzJustify="space-between">
+            <div nz-col *ngFor="let item of [0, 1, 1, 2]" class="menu-section">
+              <p>
+                <strong><span class="menu-title">APOHAIR</span></strong>
+              </p>
+              <nz-divider style="margin: 20px 0"></nz-divider>
+              <div class="menu">
+                <ul style="padding: 0">
+                  <li class="ux-menu-link">
+                    <span nz-flex nzAlign="center">
+                      <fa-icon [icon]="'chevron-right'"></fa-icon>
+                      <span class="ux-menu-link-text">{{
+                        "Why ApoHair? Nam Nam "
+                      }}</span>
+                    </span>
+                    <nz-divider style="margin: 10px 0"></nz-divider>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

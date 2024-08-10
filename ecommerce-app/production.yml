@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  invoice-management:
+    image: hungnn2810/esi-invoice-management-web:1.0
+    build:
+      context: .
+      dockerfile: Dockerfile

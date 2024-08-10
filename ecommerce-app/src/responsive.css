@@ -1,0 +1,112 @@
+.hide-for-small {
+  display: none;
+}
+
+.hide-for-medium {
+  display: none;
+}
+
+.hide-for-large {
+  display: none;
+}
+
+.show-for-small {
+  display: none;
+}
+
+.show-for-medium {
+  display: none;
+}
+
+.show-for-large {
+  display: none;
+}
+
+@media (max-width: 599px) {
+  /* Small devices (mobile) */
+  .show-for-small {
+    display: block !important;
+  }
+  .hide-for-small {
+    display: none !important;
+  }
+  .scroll-for-more .ng-fa-icon {
+    font-size: 20px !important;
+  }
+  /* ABOUT US */
+  .wrapper-section.passion {
+    height: 20vh !important;
+  }
+
+  .wrapper-section.products .banner-1,
+  .wrapper-section.products .banner-2,
+  .wrapper-section.products .banner-3 {
+    margin: 10px 0 !important;
+  }
+
+  .custom-anchor {
+    display: none !important;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+  /* Medium devices (tablet) */
+  .show-for-medium {
+    display: block !important;
+  }
+  .hide-for-medium {
+    display: none !important;
+  }
+
+  /* ABOUT US */
+  .wrapper-section.passion {
+    height: 45vh !important;
+  }
+  .wrapper-section.products .banner-1,
+  .wrapper-section.products .banner-2,
+  .wrapper-section.products .banner-3 {
+    margin: 10px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Large devices (desktop) */
+  .show-for-large {
+    display: block !important;
+  }
+  .hide-for-large {
+    display: none !important;
+  }
+}
+
+/* Shared styles for both small and medium devices */
+@media (max-width: 1199px) {
+  /* HEADER */
+  .masthead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-inner.container {
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .header-nav .header-nav-item {
+    padding: 0 5px !important;
+  }
+  .header-nav .header-nav-item::before {
+    display: none !important;
+  }
+
+  /* FOOTER */
+  #footer .wrapper-section.dark > .container {
+    padding: 30px !important;
+  }
+  #footer .company-information {
+    margin-bottom: 35px;
+  }
+  #footer .menu-section {
+    margin-bottom: 20px;
+  }
+}
