@@ -1,0 +1,378 @@
+<!-- BANNER TOP -->
+<section>
+  <div class="wrapper-section home bg-fill bg container-fluid">
+    <div class="absolute fill"></div>
+    <div class="banner-layers container">
+      <div nz-row>
+        <div
+          *ngFor="let item of bannerTop"
+          nz-col
+          nzXs="12"
+          nzSm="12"
+          nzMd="6"
+          nzLg="6"
+          nzXl="6"
+          class="border-before"
+        >
+          <div nz-flex nzJustify="center" nzAlign="center">
+            <span nz-icon class="me-2">
+              <img [src]="item.icon" alt="" style="width: 22px; height: 22px" />
+            </span>
+            <span class="fw-bold" style="color: #555">{{
+              item.title | translate
+            }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrapper-section container-fluid custom-carousel">
+    <owl-carousel-o #owlCarouselBanner [options]="bannerPageOptions">
+      <ng-template carouselSlide *ngFor="let item of bannerPageCarousel">
+        <img
+          [src]="item.src"
+          loading="lazy"
+          alt="carousel image"
+          class="carousel-image"
+        />
+      </ng-template>
+    </owl-carousel-o>
+
+    <div class="carousel-nav-container">
+      <button
+        nz-button
+        nzShape="circle"
+        class="carousel-nav carousel-nav-left"
+        (click)="prevSlide()"
+      >
+        <span nz-icon>
+          <fa-icon [icon]="'chevron-left'"></fa-icon>
+        </span>
+      </button>
+      <button
+        nz-button
+        nzShape="circle"
+        class="carousel-nav carousel-nav-right"
+        (click)="nextSlide()"
+      >
+        <span nz-icon>
+          <fa-icon [icon]="'chevron-right'"></fa-icon>
+        </span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section id="content-3">
+  <div class="wrapper-section products-banner bg-fill bg container-fluid">
+    <div class="banner-layers container">
+      <div nz-row>
+        <div
+          nz-col
+          nzMd="10"
+          nzLg="10"
+          nzXl="10"
+          data-aos="fade-right"
+          data-aos-duration="600"
+        >
+          <nz-divider
+            [nzText]="titleContent3"
+            style="border-top-color: #00000036"
+          >
+            <ng-template #titleContent3>
+              <h3 class="section-title">
+                <span
+                  class="section-title-main"
+                  style="font-size: 29px; color: var(--text-dark-color)"
+                >
+                  {{ "New products" | translate }}
+                </span>
+              </h3>
+            </ng-template>
+          </nz-divider>
+
+          <div
+            class="text"
+            data-aos="fade-left"
+            data-aos-duration="1100"
+            data-aos-easing="ease-in-out"
+          >
+            <p>
+              <strong>Phan Van Toan</strong> (<strong hightlight
+                >Tony Phan</strong
+              >), born in <strong>1980</strong>, is the esteemed CEO of Apohair,
+              a renowned company specializing in hair extensions. With a passion
+              for the beauty industry, Toan has accumulated extensive experience
+              in the field of hair extensions. His journey began 12 years ago
+              when he recognized the transformative power of high-quality hair
+              extensions and their ability to boost confidence and enhance
+              natural beauty.
+            </p>
+          </div>
+
+          <div nz-flex nzAlign="center" nzJustify="center" class="my-3">
+            <button nz-button nzType="primary">
+              <span class="text-uppercase fw-bold">{{
+                "Contact" | translate
+              }}</span>
+              <span nz-icon>
+                <fa-icon [icon]="'phone'"></fa-icon>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div
+          nz-col
+          nzMd="14"
+          nzLg="14"
+          nzXl="14"
+          class="ps-3"
+          data-aos="fade-left"
+          data-aos-duration="600"
+          class="container"
+        >
+          <div nz-flex nzAlign="center" nzJustify="center">
+            <img
+              src="../../../assets/images/background/PASSION.png"
+              alt=""
+              loading="lazy"
+              style="width: 100%; height: auto"
+              class="show-for-small hide-for-medium show-for-large"
+            />
+            <img
+              src="../../../assets/images/founder/CEO-Phan-Van-Toan-Tony-Phan.jpg"
+              alt=""
+              loading="lazy"
+              style="width: 100%; height: auto"
+              class="hide-for-small show-for-medium hide-for-large"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="content-4">
+  <div class="wrapper-section banner-why-choose bg-fill bg container-fluid">
+    <div
+      class="section-bg-overlay absolute fill"
+      style="background-color: #0f1520b0"
+    ></div>
+    <div
+      class="banner-layers container"
+      data-aos="fade-right"
+      data-aos-duration="1000"
+    >
+      <nz-divider
+        [nzText]="titleContent4"
+        style="border-top-color: #f1f1f1e1; padding: 0 5%"
+      >
+        <ng-template #titleContent4>
+          <h3 nz-flex nzAlign="end">
+            <span
+              class="section-title-main text-capitalize"
+              style="font-size: 30px; color: var(--text-light-color)"
+            >
+              {{ "Why Choose" | translate }}
+            </span>
+            <span
+              hightlight
+              class="font-dancing ps-3 fw-bold"
+              style="font-size: 56px; line-height: 1"
+              >MGV</span
+            >
+          </h3>
+        </ng-template>
+      </nz-divider>
+
+      <div nz-flex nzJustify="center" nzAlign="center">
+        <p
+          class="text text-center font-italic"
+          style="width: 70%; color: var(--text-light-color)"
+        >
+          {{
+            "We always appreciate the quality of products and services provided to customers These products can be customized according to your wishes"
+              | translate
+          }}
+        </p>
+      </div>
+    </div>
+
+    <div nz-row class="p-3" nzJustify="center" nzGutter="150">
+      <div
+        nz-col
+        nzXs="24"
+        nzSm="24"
+        nzMd="12"
+        nzLg="12"
+        nzXl="12"
+        class="my-2"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        data-aos-once="false"
+      >
+        <div
+          nz-flex
+          nzAlign="center"
+          nzJustify="end"
+          nzGap="20px"
+          class="pb-5 px-2"
+        >
+          <div>
+            <h4 class="text-capitalize text-light text-right m-0">
+              {{ "Supply area" | translate }}
+            </h4>
+            <div class="text">
+              <p class="text-right text-light">
+                {{
+                  "There are more than 100 countries in the world." | translate
+                }}
+              </p>
+            </div>
+          </div>
+          <div nz-flex nzAlign="center" nzJustify="center">
+            <img
+              src="../../../assets/images/home/worldwide.svg"
+              style="width: 45px; height: auto"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div
+          nz-flex
+          nzAlign="center"
+          nzJustify="end"
+          nzGap="20px"
+          class="pb-5 px-2"
+        >
+          <div>
+            <h4 class="text-capitalize text-light text-right m-0">
+              {{ "Delivery Quantity" | translate }}
+            </h4>
+            <div class="text">
+              <p class="text-right text-light">
+                {{ "At least 1-2 tons per month." | translate }}
+              </p>
+            </div>
+          </div>
+          <div nz-flex nzAlign="center" nzJustify="center">
+            <img
+              src="../../../assets/images/home/trolley-box.svg"
+              style="width: 45px; height: auto"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        nz-col
+        nzXs="24"
+        nzSm="24"
+        nzMd="12"
+        nzLg="12"
+        nzXl="12"
+        class="my-2"
+        data-aos="fade-left"
+        data-aos-duration="1200"
+        data-aos-once="false"
+      >
+        <div nz-flex nzAlign="center" nzGap="20px" class="pb-5 px-2">
+          <div nz-flex nzAlign="center" nzJustify="center">
+            <img
+              src="../../../assets/images/home/buy.svg"
+              style="width: 45px; height: auto"
+              alt=""
+            />
+          </div>
+
+          <div>
+            <h4 class="text-capitalize text-light text-left m-0">
+              {{ "Ability Provide" | translate }}
+            </h4>
+            <div class="text">
+              <p class="text-left text-light">
+                {{ "About 3 tons per month." | translate }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div nz-flex nzAlign="center" nzGap="20px" class="pb-5 px-2">
+          <div nz-flex nzAlign="center" nzJustify="center">
+            <img
+              src="../../../assets/images/home/quality.svg"
+              style="width: 45px; height: auto"
+              alt=""
+            />
+          </div>
+
+          <div>
+            <h4 class="text-capitalize text-light text-left m-0">
+              {{ "Business Experience" | translate }}
+            </h4>
+            <div class="text">
+              <p class="text-left text-light">
+                {{
+                  "More than 15 years of experience in the hair export industry."
+                    | translate
+                }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrapper-section carousel-brands bg-fill bg container-fluid">
+    <div
+      class="banner-layers container"
+      data-aos="fade-right"
+      data-aos-duration="1000"
+    >
+      <nz-divider
+        [nzText]="titleContent5"
+        style="border-top-color: #00000036; padding: 0 5%"
+      >
+        <ng-template #titleContent5>
+          <h3 nz-flex nzAlign="end">
+            <span
+              class="section-title-main text-capitalize"
+              style="font-size: 30px; color: var(--text-dark-color)"
+            >
+              {{ "Press saying about" | translate }}
+            </span>
+            <span
+              hightlight
+              class="font-dancing ps-3 fw-bold"
+              style="font-size: 56px; line-height: 1"
+            >
+              MGV
+            </span>
+          </h3>
+        </ng-template>
+      </nz-divider>
+    </div>
+    <div class="banner-layers container">
+      <owl-carousel-o [options]="brandOwlOptions">
+        <ng-template carouselSlide *ngFor="let item of brandCarousel">
+          <div nz-flex nzAlign="center" nzJustify="center" class="px-2">
+            <img
+              [src]="item.logo"
+              loading="lazy"
+              alt=""
+              style="width: 100%; height: auto"
+            />
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+  </div>
+</section>

@@ -87,61 +87,61 @@ export const EXTENSIONS: Array<Extension> = [
   },
 
   // ACCESSORIES
-  {
-    name: 'Accessories',
-    type: 'accessory',
-    subMenu: [
-      {
-        name: 'Accessories',
-        route: '/',
-        items: [
-          {
-            name: 'Custom tags (Contact us)',
-            route: '/normal-ponytail',
-            src: '../../../assets/images/header/free-shipping.svg',
-          },
-          {
-            name: 'Keratin',
-            route: '/invisible-ponytail',
-            src: '../../../assets/images/header/free-shipping.svg',
-          },
-          {
-            name: 'Remover',
-            route: '/long-ponytail',
-            src: '../../../assets/images/header/free-shipping.svg',
-          },
-          {
-            name: 'Beads',
-            route: '/mini-ponytail',
-            src: '../../../assets/images/header/free-shipping.svg',
-          },
-          {
-            name: 'Clips',
-            route: '/tape-1cm',
-            src: '../../../assets/images/header/free-shipping.svg',
-          },
-          {
-            name: 'Cap Wigs',
-            route: '/tape-8cm',
-            src: '../../../assets/images/header/free-shipping.svg',
-          },
-          {
-            name: 'Texture Ring',
-            route: '/tape-8cm',
-            src: '../../../assets/images/header/free-shipping.svg',
-          },
-          {
-            name: 'Tape Roll',
-            route: '/tape-8cm',
-            src: '../../../assets/images/header/free-shipping.svg',
-          },
-          {
-            name: 'Color Ring',
-            route: '/tape-8cm',
-            src: '../../../assets/images/header/free-shipping.svg',
-          },
-        ],
-      },
-    ],
-  },
+  // {
+  //   name: 'Accessories',
+  //   type: 'accessory',
+  //   subMenu: [
+  //     {
+  //       name: 'Accessories',
+  //       route: '/',
+  //       items: [
+  //         {
+  //           name: 'Custom tags (Contact us)',
+  //           route: '/normal-ponytail',
+  //           src: '../../../assets/images/header/free-shipping.svg',
+  //         },
+  //         {
+  //           name: 'Keratin',
+  //           route: '/invisible-ponytail',
+  //           src: '../../../assets/images/header/free-shipping.svg',
+  //         },
+  //         {
+  //           name: 'Remover',
+  //           route: '/long-ponytail',
+  //           src: '../../../assets/images/header/free-shipping.svg',
+  //         },
+  //         {
+  //           name: 'Beads',
+  //           route: '/mini-ponytail',
+  //           src: '../../../assets/images/header/free-shipping.svg',
+  //         },
+  //         {
+  //           name: 'Clips',
+  //           route: '/tape-1cm',
+  //           src: '../../../assets/images/header/free-shipping.svg',
+  //         },
+  //         {
+  //           name: 'Cap Wigs',
+  //           route: '/tape-8cm',
+  //           src: '../../../assets/images/header/free-shipping.svg',
+  //         },
+  //         {
+  //           name: 'Texture Ring',
+  //           route: '/tape-8cm',
+  //           src: '../../../assets/images/header/free-shipping.svg',
+  //         },
+  //         {
+  //           name: 'Tape Roll',
+  //           route: '/tape-8cm',
+  //           src: '../../../assets/images/header/free-shipping.svg',
+  //         },
+  //         {
+  //           name: 'Color Ring',
+  //           route: '/tape-8cm',
+  //           src: '../../../assets/images/header/free-shipping.svg',
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
 ];

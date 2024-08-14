@@ -47,6 +47,14 @@
   .custom-anchor {
     display: none !important;
   }
+
+  /* CAROUSEL */
+  .carousel-nav-container {
+    display: none !important;
+  }
+  .custom-carousel img.carousel-image {
+    height: 30vh !important ;
+  }
 }
 
 @media (min-width: 600px) and (max-width: 1199px) {

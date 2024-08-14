@@ -1,9 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: "Questrial";
   src: url("../src/assets/fonts/Questrial-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "DancingScript";
+  src: url("../src/assets/fonts/DancingScript-Variable.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @import "~ng-zorro-antd/ng-zorro-antd.variable.min.css";
 :root {
   --ant-primary-color: #8638ec !important;
@@ -11,7 +25,7 @@
   --ant-primary-color-active: #55219d !important;
   --ant-primary-color-outline: #8638ec2f !important;
   --ant-primary-1: #f7f0fa !important;
-  --ant-primary-2: #f5e2fd !important;
+  --ant-primary-2: #d8cbde !important;
   --ant-primary-3: #e9c0fa !important;
   --ant-primary-4: #ae86e1 !important;
   --ant-primary-5: #a569df !important;
@@ -55,6 +69,7 @@
   --overlay-color-2: #000000b8;
   --text-dark-color: #0a0a0a;
   --text-light-color: #f1f1f1;
+  --background-grey: #eeeeee;
 }
 
 html {
@@ -66,6 +81,9 @@ app-root {
 }
 app-header {
   background-color: #fff !important;
+}
+app-home-layout {
+  display: unset !important;
 }
 #navbar {
   background-color: #fff;
@@ -83,6 +101,12 @@ body {
   background-color: #fff !important;
   font-family: "Questrial", sans-serif;
   overflow-x: hidden;
+  display: block;
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 100% !important;
+  font-size: 1rem;
 }
 .ant-layout {
   background-color: #fff !important;
@@ -104,6 +128,13 @@ section {
 
 [hightlight] {
   color: var(--ant-primary-color) !important;
+}
+[data-aos] {
+  max-width: 100%; /* Ensure AOS elements don't exceed viewport width */
+  overflow-x: hidden; /* Ensure elements themselves don't cause overflow */
+}
+.font-dancing {
+  font-family: "DancingScript" !important;
 }
 /* CUSTOM ANCHOR */
 .fixed-anchor {
@@ -145,6 +176,7 @@ section {
   border-color: #fff;
   box-shadow: 0 2px 8px #00000026;
 }
+
 /* REMOVE DEFAULT STYPE UL/LI */
 ul li {
   list-style: none;
@@ -156,9 +188,21 @@ ul li::marker {
 ul.list-style li {
   list-style: disc;
 }
-/* FONTSIZE */
-.fs-13 {
-  font-size: 13px;
+
+/* border right before */
+.border-before::before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 0.5px;
+  height: 1em;
+  background-color: rgb(0 0 0 / 15%);
+  transform: translateY(-50%);
+  content: "";
+}
+.border-before:last-child::before {
+  display: none;
 }
 
 /* BADGE */
@@ -637,6 +681,13 @@ nz-image-preview {
   padding: 10px 7px;
   text-transform: uppercase;
   font-size: 14px;
+  -moz-user-select: none !important;
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
 }
 .ant-layout-header .ant-menu .ant-menu-item::before {
   position: absolute;
@@ -831,4 +882,70 @@ nz-image-preview {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
+}
+
+/* CUSTOM OWL CAROUSEL */
+.custom-carousel {
+  position: relative;
+}
+
+.custom-carousel .carousel-nav-container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-50%);
+  transition: all linear 0.2s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+}
+
+.custom-carousel:hover .carousel-nav-container {
+  visibility: visible !important;
+  opacity: 1;
+}
+
+.custom-carousel .carousel-nav {
+  background-color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 10;
+}
+.custom-carousel .carousel-nav:hover {
+  background-color: var(--ant-primary-color);
+  color: var(--text-light-color);
+}
+.custom-carousel .carousel-nav-left {
+  left: 2%;
+  transform: translateX(20%);
+}
+
+.custom-carousel .carousel-nav-right {
+  right: 2%;
+  transform: translateX(-20%);
+}
+
+.custom-carousel .owl-dots {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.custom-carousel .carousel-image {
+  width: calc(100vw / 1);
+  max-width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  cursor: grab;
 }

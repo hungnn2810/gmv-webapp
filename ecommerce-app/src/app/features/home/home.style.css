@@ -1,0 +1,24 @@
+.products-banner {
+  background-color: var(--ant-primary-2);
+}
+
+.banner-why-choose {
+  background-image: url("../../../assets/images/home/Our-Office.jpg");
+}
+
+.carousel-brands {
+  background-color: var(--background-grey);
+}
+
+.banner-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.slide {
+  width: 100%;
+  height: 400px; /* Adjust height as needed */
+  background-size: cover;
+  background-position: center;
+}

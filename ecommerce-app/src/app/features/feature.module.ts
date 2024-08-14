@@ -45,6 +45,8 @@ import { IconsProviderModule } from '../icons-provider.module';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ScrollMoreButton } from '../core/components/scroll-more-button/scroll-more-button.component';
+import { HomeComponent } from './home/home.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -58,6 +60,7 @@ import { ScrollMoreButton } from '../core/components/scroll-more-button/scroll-m
 
     //#region Components
     AboutUsComponent,
+    HomeComponent,
     //#endregion
 
     //#region Common component
@@ -67,6 +70,8 @@ import { ScrollMoreButton } from '../core/components/scroll-more-button/scroll-m
   imports: [
     CommonModule,
     IconsProviderModule,
+    AppRoutingModule,
+    InfiniteScrollModule,
     FormsModule,
     NzTableModule,
     NzDividerModule,
@@ -102,10 +107,9 @@ import { ScrollMoreButton } from '../core/components/scroll-more-button/scroll-m
     NzCollapseModule,
     NgxChartsModule,
     NzFlexModule,
-    AppRoutingModule,
-    InfiniteScrollModule,
     NzEmptyModule,
     NzTypographyModule,
+    CarouselModule,
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,
